@@ -14,7 +14,7 @@ import org.semanticweb.owlapi.util.SimpleIRIMapper;
 public class DomainOntology {
 
     private List<Axiom> Axioms;
-    private String LocalFile = "file:/c:/owl/knOWLearn_Ontology_2.owl";
+    private String LocalFile = "file:/home/vieyra/owl/knOWLearn_Ontology_2.owl";
     private String LocalIRI = "http://knowlearn.cenidet.edu.mx/ontology_2.owl";
     private OWLOntologyManager manager;
     private OWLOntology ontology;
@@ -47,6 +47,9 @@ public class DomainOntology {
         IRI ontologyURI = IRI.create(this.LocalIRI);
         IRI physicalURI = IRI.create(this.LocalFile);
 
+        System.out.println("/-\\ \t" + ontologyURI);
+        System.out.println("/-\\ \t" + physicalURI);
+        
         SimpleIRIMapper mapper = new SimpleIRIMapper(ontologyURI, physicalURI);
         manager.addIRIMapper(mapper);
         this.ontology = manager.createOntology(ontologyURI);

@@ -12,7 +12,7 @@ public class WordNet {
 
     public static WordNetDatabase getWordNetDatabase() {
         if (WordnetDatabase == null) {
-            System.setProperty("wordnet.database.dir", "C:\\Program Files (x86)\\WordNet\\3.0\\dict");
+            System.setProperty("wordnet.database.dir", "./resources/WordNet-3.0/dict");
             WordnetDatabase = WordNetDatabase.getFileInstance();
             getTopLevelEntities();
         }

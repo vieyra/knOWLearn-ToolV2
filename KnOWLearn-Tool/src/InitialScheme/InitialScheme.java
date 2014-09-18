@@ -64,15 +64,16 @@ public class InitialScheme {
             System.out.println("TotalAxioms" + "\t" + this.Axioms.size());
             try {
                 String LocalFile = "file:/";
-                String LocalIRI = "http://knowlearn.cenidet.edu.mx/";
+                String LocalIRI = "http://knowlearn.infotec.com.mx/";
                 File OntFile = OWLFileFilter.saveOntology();
                 if(OntFile != null){
                     LocalFile += OntFile.getAbsolutePath().replace("\\", "/");
                     LocalIRI += OntFile.getName();
                 }else{
-                    LocalFile = "file:/c:/owl/knOWLearn_Ontology.owl";
+                    LocalFile = "file:/home/vieyra/owl/knOWLearn_Ontology.owl";
                     LocalIRI = "http://knowlearn.cenidet.edu.mx/ontology.owl";
                 }
+                System.out.println("---- Saving ontology ----");
             DomainOntology domainOntology = new DomainOntology(this.Axioms, LocalFile, LocalIRI);
             } catch (OWLOntologyCreationException ex) {
                 System.err.println("Ontology can´t be created");
