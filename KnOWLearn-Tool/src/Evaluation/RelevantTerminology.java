@@ -59,7 +59,7 @@ public class RelevantTerminology {
             OWLClass Class = it.next();
             String ClassName = this.man.getLabel(Class).replace(" ", "_");
             try {
-                int Lresponse = os.searchClasses(new String[]{ClassName}).length;
+                int Lresponse = os.searchByClasses(new String[]{ClassName}).length;
                 if(Lresponse > 1){
                     System.out.println(ClassName + ";" + Lresponse);
                 }
@@ -79,7 +79,7 @@ public class RelevantTerminology {
         for (int i = 0; i < OntologyVocabulary.size() - 1; i++) {
             for (int j = i + 1; j < OntologyVocabulary.size(); j++) {
                 try {
-                    int Lresponse = os.searchClasses(new String[]{OntologyVocabulary.get(i), OntologyVocabulary.get(j)}).length;
+                    int Lresponse = os.searchByClasses(new String[]{OntologyVocabulary.get(i), OntologyVocabulary.get(j)}).length;
                     if (Lresponse > 0) {
                         Wterms.get(i)[1] = Integer.parseInt(Wterms.get(i)[1] + "") + Lresponse;
                         Wterms.get(j)[1] = Integer.parseInt(Wterms.get(j)[1] + "") + Lresponse;
@@ -132,7 +132,7 @@ public class RelevantTerminology {
 //        for (int i = 0; i < terms.size() - 1; i++) {
 //            for (int j = i + 1; j < terms.size(); j++) {
 //                try {
-//                    int Lresponse = os.searchClasses(new String[]{terms.get(i), terms.get(j)}).length;
+//                    int Lresponse = os.searchByClasses(new String[]{terms.get(i), terms.get(j)}).length;
 //                    if (Lresponse > 0) {
 //                        Wterms.get(i)[1] = (int) Wterms.get(i)[1] + Lresponse;
 //                        Wterms.get(j)[1] = (int) Wterms.get(j)[1] + Lresponse;

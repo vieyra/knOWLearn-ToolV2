@@ -42,7 +42,7 @@ public class OpenOntology {
         for (int i = 0; i < terms.size() - 1; i++) {
             for (int j = i + 1; j < terms.size(); j++) {
                 try{
-                int Lresponse = os.searchClasses(new String[]{terms.get(i),terms.get(j)}).length;
+                int Lresponse = os.searchByClasses(new String[]{terms.get(i),terms.get(j)}).length;
                 if(Lresponse > 0){
                     Wterms.get(i)[1] = Integer.parseInt(Wterms.get(i)[1] + "") + Lresponse;
                     Wterms.get(j)[1] = Integer.parseInt(Wterms.get(j)[1] + "") + Lresponse;
