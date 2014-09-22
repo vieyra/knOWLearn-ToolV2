@@ -18,6 +18,7 @@ public class OWLFileFilter extends FileFilter {
         int returnVal = chooser.showSaveDialog(null);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             if (chooser.getSelectedFile() != null) {
+               System.out.println("\t****" + chooser.getSelectedFile().getAbsolutePath());
                 return chooser.getSelectedFile();
             }
         }
