@@ -2,6 +2,7 @@ package DomainOntology;
 
 import InitialScheme.Sources.OntologySources.Axioms.Axiom;
 import InitialScheme.Sources.OntologySources.Axioms.TwoElementsAxiom;
+import java.io.File;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ import org.semanticweb.owlapi.util.SimpleIRIMapper;
 public class DomainOntology {
 
     private List<Axiom> Axioms;
-    private String LocalFile = "file:/home/vieyra/owl/knOWLearn_Ontology_2.owl";
+    private File LocalFile = new File("./owl/knOWLearn_Ontology.owl");
     private String LocalIRI = "http://knowlearn.cenidet.edu.mx/ontology_2.owl";
     private OWLOntologyManager manager;
     private OWLOntology ontology;
@@ -32,7 +33,7 @@ public class DomainOntology {
         this.saveTaxonomicalRelations();
     }
 
-    public DomainOntology(List<Axiom> Axioms, String LocalFile, String IRI) throws OWLOntologyCreationException {
+    public DomainOntology(List<Axiom> Axioms, File LocalFile, String IRI) throws OWLOntologyCreationException {
         this.LocalFile = LocalFile;
         this.LocalIRI = IRI;
         this.Axioms = Axioms;

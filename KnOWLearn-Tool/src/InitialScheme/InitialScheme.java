@@ -63,14 +63,15 @@ public class InitialScheme {
             searchAxioms();
             System.out.println("TotalAxioms" + "\t" + this.Axioms.size());
             try {
-                String LocalFile = "file:/";
+                File LocalFile;
                 String LocalIRI = "http://knowlearn.infotec.com.mx/";
                 File OntFile = OWLFileFilter.saveOntology();
+                System.out.println( "****** Result of OWLFileFilter " + OntFile);
                 if(OntFile != null){
-                    LocalFile += OntFile.getAbsolutePath().replace("\\", "/");
+                    LocalFile = OntFile;
                     LocalIRI += OntFile.getName();
                 }else{
-                    LocalFile = "file:/home/vieyra/owl/knOWLearn_Ontology.owl";
+                    LocalFile = new File("./owl/knOWLearn_Ontology.owl");
                     LocalIRI = "http://knowlearn.cenidet.edu.mx/ontology.owl";
                 }
                 System.out.println("---- Saving ontology ----");
