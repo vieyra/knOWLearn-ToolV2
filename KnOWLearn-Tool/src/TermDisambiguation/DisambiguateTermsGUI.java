@@ -36,99 +36,107 @@ public class DisambiguateTermsGUI extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        SensesList1 = new javax.swing.JList();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TermsList = new javax.swing.JList();
-        jButton1 = new javax.swing.JButton();
+      jLabel1 = new javax.swing.JLabel();
+      jLabel2 = new javax.swing.JLabel();
+      jScrollPane2 = new javax.swing.JScrollPane();
+      SensesList1 = new javax.swing.JList();
+      jScrollPane1 = new javax.swing.JScrollPane();
+      TermsList = new javax.swing.JList();
+      jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("::KnOWLearn:: - Terms Disambiguation");
+      setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+      setTitle("::KnOWLearn:: - Terms Disambiguation");
+      addWindowListener(new java.awt.event.WindowAdapter() {
+         public void windowClosing(java.awt.event.WindowEvent evt) {
+            formWindowClosing(evt);
+         }
+         public void windowClosed(java.awt.event.WindowEvent evt) {
+            formWindowClosed(evt);
+         }
+      });
 
-        jLabel1.setText("Terms:");
+      jLabel1.setText("Terms:");
 
-        jLabel2.setText("Senses:");
+      jLabel2.setText("Senses:");
 
-        SensesList1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SensesList1MouseClicked(evt);
-            }
-        });
-        SensesList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                SensesList1ValueChanged(evt);
-            }
-        });
-        jScrollPane2.setViewportView(SensesList1);
+      SensesList1.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseClicked(java.awt.event.MouseEvent evt) {
+            SensesList1MouseClicked(evt);
+         }
+      });
+      SensesList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+         public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+            SensesList1ValueChanged(evt);
+         }
+      });
+      jScrollPane2.setViewportView(SensesList1);
 
-        TermsList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                TermsListValueChanged(evt);
-            }
-        });
-        TermsList.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                TermsListPropertyChange(evt);
-            }
-        });
-        jScrollPane1.setViewportView(TermsList);
+      TermsList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+         public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+            TermsListValueChanged(evt);
+         }
+      });
+      TermsList.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+         public void propertyChange(java.beans.PropertyChangeEvent evt) {
+            TermsListPropertyChange(evt);
+         }
+      });
+      jScrollPane1.setViewportView(TermsList);
 
-        jButton1.setText("Get Initial Scheme");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+      jButton1.setText("Get Initial Scheme");
+      jButton1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            jButton1ActionPerformed(evt);
+         }
+      });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(175, 175, 175))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(jButton1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(35, 35, 35))))
-        );
+      javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+      getContentPane().setLayout(layout);
+      layout.setHorizontalGroup(
+         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGap(36, 36, 36)
+            .addComponent(jLabel1)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2)
+            .addGap(175, 175, 175))
+         .addGroup(layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(layout.createSequentialGroup()
+                  .addGap(79, 79, 79)
+                  .addComponent(jButton1)
+                  .addGap(0, 298, Short.MAX_VALUE))
+               .addGroup(layout.createSequentialGroup()
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                  .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGap(18, 18, 18))))
+      );
+      layout.setVerticalGroup(
+         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGroup(layout.createSequentialGroup()
+            .addGap(32, 32, 32)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(jLabel1)
+               .addComponent(jLabel2))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(layout.createSequentialGroup()
+                  .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+                  .addContainerGap())
+               .addGroup(layout.createSequentialGroup()
+                  .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                  .addComponent(jButton1)
+                  .addGap(35, 35, 35))))
+      );
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+      pack();
+   }// </editor-fold>//GEN-END:initComponents
 
     private void TermsListPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_TermsListPropertyChange
     }//GEN-LAST:event_TermsListPropertyChange
@@ -182,6 +190,16 @@ public class DisambiguateTermsGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+   private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+      // TODO add your handling code here:
+   }//GEN-LAST:event_formWindowClosing
+
+   private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+      // TODO add your handling code here:
+      con.close();
+      
+   }//GEN-LAST:event_formWindowClosed
+
     private void showSynsetsForSelectedTerm() {
         this.Sensesactive = false;
         Term term = this.Terms.get(this.TermsList.getSelectedIndex());
@@ -199,13 +217,13 @@ public class DisambiguateTermsGUI extends javax.swing.JFrame {
         }
         this.Sensesactive = true;
     }
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList SensesList1;
-    private javax.swing.JList TermsList;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    // End of variables declaration//GEN-END:variables
+   // Variables declaration - do not modify//GEN-BEGIN:variables
+   private javax.swing.JList SensesList1;
+   private javax.swing.JList TermsList;
+   private javax.swing.JButton jButton1;
+   private javax.swing.JLabel jLabel1;
+   private javax.swing.JLabel jLabel2;
+   private javax.swing.JScrollPane jScrollPane1;
+   private javax.swing.JScrollPane jScrollPane2;
+   // End of variables declaration//GEN-END:variables
 }
