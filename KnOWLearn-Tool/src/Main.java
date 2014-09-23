@@ -10,7 +10,11 @@ import InitialScheme.Sources.OntologySources.OntologyManager;
 import InitialScheme.Sources.Term;
 import InitialScheme.Sources.WatsonDocument;
 import edu.smu.tspell.wordnet.NounSynset;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.DatagramSocket;
+import java.net.ServerSocket;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +26,71 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
 
 public class Main {
 
+   public static void main(String[] args) throws IOException, InterruptedException {
+      int port = 10914;
+      while (true) {
+         Process process = Runtime.getRuntime().exec("python ConnectionManager.py " + port);
+
+         BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+//         BufferedReader brError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+
+//         System.out.println("Here is the standard output of the command:\n");
+         String s = null;
+         System.out.println("Trying connection in port " + port);
+         s = br.readLine();
+         Thread.sleep(10000);
+         if (s != null) {
+            System.out.println("Connection started in port " + port);
+            break;
+         }
+         port += 5;
+         // read any errors from the attempted command
+//         System.out.println("Here is the standard error of the command (if any):\n");
+//         while ((s = brError.readLine()) != null) {
+//            System.out.println(s);
+//         }
+      }
+      
+//      process.destroy();
+      //      InputStream inputstream = process.getInputStream();
+      //      BufferedInputStream bis = new BufferedInputStream(inputstream);
+
+   }
+   private static int MIN_PORT_NUMBER = 9050;
+   private static int MAX_PORT_NUMBER = 19050;
+   
+   public static boolean available(int port) {
+      if (port < MIN_PORT_NUMBER || port > MAX_PORT_NUMBER) {
+         throw new IllegalArgumentException("Invalid start port: " + port);
+      }
+
+      ServerSocket ss = null;
+      DatagramSocket ds = null;
+      try {
+         ss = new ServerSocket(port);
+         ss.setReuseAddress(true);
+         ds = new DatagramSocket(port);
+         ds.setReuseAddress(true);
+         return true;
+      } catch (IOException e) {
+      } finally {
+         if (ds != null) {
+            ds.close();
+         }
+
+         if (ss != null) {
+            try {
+               ss.close();
+            } catch (IOException e) {
+               /* should not be thrown */
+            }
+         }
+      }
+
+      return false;
+   }
+   
+   
     public static void main0(String[] args) throws RemoteException, OWLOntologyCreationException, IOException {
         String[] terms = new String[]{
             "patient/TermName/patient.n.01/TermSense/patient.n.01/SynsetName/a person who requires medical care/SynsetDefinition//Synset/affected_role.n.01/SynsetName/the semantic role of an entity that is not the agent but is directly involved in or affected by the happening denoted by the verb in the clause/SynsetDefinition//Synset/",
@@ -62,17 +131,17 @@ public class Main {
         Documents[1] = new WatsonDocument("http://www.berkeleybop.org/ontologies/obo-all/mesh/mesh.owl");
         Documents[1].setCacheDocumentURL("http://kmi-web05.open.ac.uk:81/cache/a/db8/1942/acd39/9d8bcb607b/ec4d271305352e6cd");
         Documents[1].setCoveredTerms(Arrays.asList(new String[]{"breast", "protein", "cell", "growth", "gene_expression"}));
-        Documents[1].setFile("mesh.owl");
+      Documents[1].setFile("mesh.owl");
 
-        Documents[2] = new WatsonDocument("http://purl.org/obo/owl/evoc");
-        Documents[2].setCacheDocumentURL("http://kmi-web05.open.ac.uk:81/cache/9/69d/e693/7b130/ff987a7ac2/5353e0485200e1680");
-        Documents[2].setCoveredTerms(Arrays.asList(new String[]{"breast", "treatment", "growth_factor"}));
-        Documents[2].setFile("evoc.owl");
+      Documents[2] = new WatsonDocument("http://purl.org/obo/owl/evoc");
+      Documents[2].setCacheDocumentURL("http://kmi-web05.open.ac.uk:81/cache/9/69d/e693/7b130/ff987a7ac2/5353e0485200e1680");
+      Documents[2].setCoveredTerms(Arrays.asList(new String[]{"breast", "treatment", "growth_factor"}));
+      Documents[2].setFile("evoc.owl");
 
-        Documents[3] = new WatsonDocument("http://www.cyc.com/2003/04/01/cyc");
-        Documents[3].setCacheDocumentURL("http://kmi-web05.open.ac.uk:81/cache/f/48d/d2d6/47bf9/580b858398/2b74cd7b58b52e768");
-        Documents[3].setCoveredTerms(Arrays.asList(new String[]{"cancer", "women", "tumor", "cell"}));
-        Documents[3].setFile("cyc.owl");
+      Documents[3] = new WatsonDocument("http://www.cyc.com/2003/04/01/cyc");
+      Documents[3].setCacheDocumentURL("http://kmi-web05.open.ac.uk:81/cache/f/48d/d2d6/47bf9/580b858398/2b74cd7b58b52e768");
+      Documents[3].setCoveredTerms(Arrays.asList(new String[]{"cancer", "women", "tumor", "cell"}));
+      Documents[3].setFile("cyc.owl");
 
 //        Documents[4] = new WatsonDocument("http://139.91.183.30:9090/RDF/VRP/Examples/tap.rdf");
 //        Documents[4].setCacheDocumentURL("http://kmi-web05.open.ac.uk:81/cache/e/aa9/02c9/cd6d9/318c843642/9e583ebfa89145d54");
@@ -88,9 +157,9 @@ public class Main {
 //        Documents[6].setCacheDocumentURL("http://kmi-web05.open.ac.uk:81/cache/3/704/1bb0/599fb/8dd0f1a12c/e50ad0662b6d49567");
 //        Documents[6].setCoveredTerms(Arrays.asList(new String[]{"treatment", "growth", "gene_expression"}));
 //        Documents[6].setFile("event.owl");
-        
-        InitialScheme IS = new InitialScheme(Terms, Arrays.asList(Documents));
-        new DomainOntology(IS.getAxioms());
+
+      InitialScheme IS = new InitialScheme(Terms, Arrays.asList(Documents));
+      new DomainOntology(IS.getAxioms());
 //        System.out.println("Getting axioms");
 //        getAxioms(Terms.toArray(new Term[]{}), Arrays.asList(Documents));
 //        System.out.println("\nDeleting repeated axioms");
@@ -98,48 +167,48 @@ public class Main {
 //        System.out.println("Printing relevant Axioms");
 //        printRelevantAxioms(Terms);
 //        System.out.println("Printed relevant Axioms");
-    }
-    
-    public static void main(String[] args) throws RemoteException, OWLOntologyCreationException, IOException {
-        String[] terms = new String[]{
-            "breast/TermName/breast.n.01/TermSense/breast.n.01/SynsetName/the front of the trunk from the neck to the abdomen/SynsetDefinition//Synset/breast.n.02/SynsetName/either of two soft fleshy milk-secreting glandular organs on the chest of a woman/SynsetDefinition//Synset/breast.n.03/SynsetName/meat carved from the breast of a fowl/SynsetDefinition//Synset/breast.n.04/SynsetName/the part of an animal's body that corresponds to a person's chest/SynsetDefinition//Synset//Term/" +
-"cancer/TermName/cancer.n.01/TermSense/cancer.n.01/SynsetName/any malignant growth or tumor caused by abnormal and uncontrolled cell division; it may spread to other parts of the body through the lymphatic system or the blood stream/SynsetDefinition//Synset/cancer.n.02/SynsetName/(astrology) a person who is born while the sun is in Cancer/SynsetDefinition//Synset/cancer.n.03/SynsetName/a small zodiacal constellation in the northern hemisphere; between Leo and Gemini/SynsetDefinition//Synset/cancer.n.04/SynsetName/the fourth sign of the zodiac; the sun is in this sign from about June 21 to July 22/SynsetDefinition//Synset/cancer.n.05/SynsetName/type genus of the family Cancridae/SynsetDefinition//Synset//Term/" +
-"diagnosis/TermName/diagnosis.n.01/TermSense/diagnosis.n.01/SynsetName/identifying the nature or cause of some phenomenon/SynsetDefinition//Synset//Term/" +
-"patient/TermName/patient.n.01/TermSense/patient.n.01/SynsetName/a person who requires medical care/SynsetDefinition//Synset/affected_role.n.01/SynsetName/the semantic role of an entity that is not the agent but is directly involved in or affected by the happening denoted by the verb in the clause/SynsetDefinition//Synset//Term/" +
-"study/TermName/study.n.09/TermSense/survey.n.01/SynsetName/a detailed critical inspection/SynsetDefinition//Synset/study.n.02/SynsetName/applying the mind to learning and understanding a subject (especially by reading)/SynsetDefinition//Synset/report.n.01/SynsetName/a written document describing the findings of some individual or group/SynsetDefinition//Synset/study.n.04/SynsetName/a state of deep mental absorption/SynsetDefinition//Synset/study.n.05/SynsetName/a room used for reading and writing and studying/SynsetDefinition//Synset/discipline.n.01/SynsetName/a branch of knowledge/SynsetDefinition//Synset/sketch.n.01/SynsetName/preliminary drawing for later elaboration/SynsetDefinition//Synset/cogitation.n.02/SynsetName/attentive consideration and meditation/SynsetDefinition//Synset/study.n.09/SynsetName/someone who memorizes quickly and easily (as the lines for a part in a play)/SynsetDefinition//Synset/study.n.10/SynsetName/a composition intended to develop one aspect of the performer's technique/SynsetDefinition//Synset//Term/" +
-"cell/TermName/cell.n.02/TermSense/cell.n.01/SynsetName/any small compartment/SynsetDefinition//Synset/cell.n.02/SynsetName/(biology) the basic structural and functional unit of all organisms; they may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals/SynsetDefinition//Synset/cell.n.03/SynsetName/a device that delivers an electric current as the result of a chemical reaction/SynsetDefinition//Synset/cell.n.04/SynsetName/a small unit serving as part of or as the nucleus of a larger political movement/SynsetDefinition//Synset/cellular_telephone.n.01/SynsetName/a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver/SynsetDefinition//Synset/cell.n.06/SynsetName/small room in which a monk or nun lives/SynsetDefinition//Synset/cell.n.07/SynsetName/a room where a prisoner is kept/SynsetDefinition//Synset//Term/" +
-"expression/TermName/expression.n.07/TermSense/expression.n.01/SynsetName/the feelings expressed on a person's face/SynsetDefinition//Synset/expression.n.02/SynsetName/expression without words/SynsetDefinition//Synset/expression.n.03/SynsetName/the communication (in speech or writing) of your beliefs or opinions/SynsetDefinition//Synset/saying.n.01/SynsetName/a word or phrase that particular people use in particular situations/SynsetDefinition//Synset/formulation.n.03/SynsetName/the style of expressing yourself/SynsetDefinition//Synset/formula.n.01/SynsetName/a group of symbols that make a mathematical statement/SynsetDefinition//Synset/expression.n.07/SynsetName/(genetics) the process of expressing a gene/SynsetDefinition//Synset/construction.n.02/SynsetName/a group of words that form a constituent of a sentence and are considered as a single unit/SynsetDefinition//Synset/expression.n.09/SynsetName/the act of forcing something out by squeezing or pressing/SynsetDefinition//Synset//Term/" +
-"tumor/TermName/tumor.n.01/TermSense/tumor.n.01/SynsetName/an abnormal new mass of tissue that serves no purpose/SynsetDefinition//Synset//Term/" +
-"role/TermName/character.n.04/TermSense/function.n.03/SynsetName/the actions and activities assigned to or required or expected of a person or group/SynsetDefinition//Synset/character.n.04/SynsetName/an actor's portrayal of someone in a play/SynsetDefinition//Synset/function.n.02/SynsetName/what something is used for/SynsetDefinition//Synset/role.n.04/SynsetName/normal or customary activity of a person in a particular social setting/SynsetDefinition//Synset//Term/" +
-"protein/TermName/protein.n.01/TermSense/protein.n.01/SynsetName/any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes/SynsetDefinition//Synset//Term/" +
-"survival/TermName/None/TermSense/survival.n.01/SynsetName/a state of surviving; remaining alive/SynsetDefinition//Synset/survival.n.02/SynsetName/a natural process resulting in the evolution of organisms best adapted to the environment/SynsetDefinition//Synset/survival.n.03/SynsetName/something that survives/SynsetDefinition//Synset//Term/" +
-"carcinoma/TermName/carcinoma.n.01/TermSense/carcinoma.n.01/SynsetName/any malignant tumor derived from epithelial tissue; one of the four major types of cancer/SynsetDefinition//Synset//Term/" +
-"risk/TermName/risk.n.03/TermSense/hazard.n.01/SynsetName/a source of danger; a possibility of incurring loss or misfortune/SynsetDefinition//Synset/risk.n.02/SynsetName/a venture undertaken without regard to possible loss or injury/SynsetDefinition//Synset/risk.n.03/SynsetName/the probability of becoming infected given that exposure to an infectious agent has occurred/SynsetDefinition//Synset/risk.n.04/SynsetName/the probability of being exposed to an infectious agent/SynsetDefinition//Synset//Term/" +
-"treatment/TermName/treatment.n.02/TermSense/treatment.n.01/SynsetName/care provided to improve a situation (especially medical procedures or applications that are intended to relieve illness or injury)/SynsetDefinition//Synset/treatment.n.02/SynsetName/the management of someone or something/SynsetDefinition//Synset/treatment.n.03/SynsetName/a manner of dealing with something artistically/SynsetDefinition//Synset/discussion.n.01/SynsetName/an extended communication (often interactive) dealing with some particular topic/SynsetDefinition//Synset//Term/" +
-"case/TermName/font.n.01/TermSense/case.n.01/SynsetName/an occurrence of something/SynsetDefinition//Synset/event.n.02/SynsetName/a special set of circumstances/SynsetDefinition//Synset/lawsuit.n.01/SynsetName/a comprehensive term for any proceeding in a court of law whereby an individual seeks a legal remedy/SynsetDefinition//Synset/case.n.04/SynsetName/the actual state of things/SynsetDefinition//Synset/case.n.05/SynsetName/a portable container for carrying several objects/SynsetDefinition//Synset/case.n.06/SynsetName/a person requiring professional services/SynsetDefinition//Synset/subject.n.06/SynsetName/a person who is subjected to experimental or other observational procedures; someone who is an object of investigation/SynsetDefinition//Synset/case.n.08/SynsetName/a problem requiring investigation/SynsetDefinition//Synset/case.n.09/SynsetName/a statement of facts and reasons used to support an argument/SynsetDefinition//Synset/case.n.10/SynsetName/the quantity contained in a case/SynsetDefinition//Synset/case.n.11/SynsetName/nouns or pronouns or adjectives (often marked by inflection) related in some way to other words in a sentence/SynsetDefinition//Synset/case.n.12/SynsetName/a specific state of mind that is temporary/SynsetDefinition//Synset/character.n.05/SynsetName/a person of a specified kind (usually with many eccentricities)/SynsetDefinition//Synset/font.n.01/SynsetName/a specific size and style of type within a type family/SynsetDefinition//Synset/sheath.n.02/SynsetName/an enveloping structure or covering enclosing an animal or plant organ or part/SynsetDefinition//Synset/shell.n.08/SynsetName/the housing or outer covering of something/SynsetDefinition//Synset/casing.n.03/SynsetName/the enclosing frame around a door or window opening/SynsetDefinition//Synset/case.n.18/SynsetName/(printing) the receptacle in which a compositor has his type, which is divided into compartments for the different letters, spaces, or numbers/SynsetDefinition//Synset/case.n.19/SynsetName/bed linen consisting of a cover for a pillow/SynsetDefinition//Synset/case.n.20/SynsetName/a glass container used to store and display items in a shop or museum or home/SynsetDefinition//Synset//Term/" +
-"metastasis/TermName/metastasis.n.01/TermSense/metastasis.n.01/SynsetName/the spreading of a disease (especially cancer) to another part of the body/SynsetDefinition//Synset//Term/" +
-"positive/TermName/positive.n.01/TermSense/positive.n.01/SynsetName/the primary form of an adjective or adverb; denotes a quality without qualification, comparison, or relation to increase or diminution/SynsetDefinition//Synset/positive.n.02/SynsetName/a film showing a photographic image whose tones correspond to those of the original subject/SynsetDefinition//Synset//Term/" +
-"surgery/TermName/None/TermSense/surgery.n.01/SynsetName/the branch of medical science that treats disease or injury by operative procedures/SynsetDefinition//Synset/surgery.n.02/SynsetName/a room where a doctor or dentist can be consulted/SynsetDefinition//Synset/operating_room.n.01/SynsetName/a room in a hospital equipped for the performance of surgical operations/SynsetDefinition//Synset/operation.n.06/SynsetName/a medical procedure involving an incision with instruments; performed to repair damage or arrest disease in a living body/SynsetDefinition//Synset//Term/" +
-"receptor/TermName/receptor.n.01/TermSense/receptor.n.01/SynsetName/a cellular structure that is postulated to exist in order to mediate between a chemical agent that acts on nervous tissue and the physiological response/SynsetDefinition//Synset/sense_organ.n.01/SynsetName/an organ having nerve endings (in the skin or viscera or eye or ear or nose or mouth) that respond to stimulation/SynsetDefinition//Synset//Term/" +
-"growth/TermName/growth.n.06/TermSense/growth.n.01/SynsetName/(biology) the process of an individual organism growing organically; a purely biological unfolding of events involved in an organism changing gradually from a simple to a more complex level/SynsetDefinition//Synset/growth.n.02/SynsetName/a progression from simpler to more complex forms/SynsetDefinition//Synset/increase.n.03/SynsetName/a process of becoming larger or longer or more numerous or more important/SynsetDefinition//Synset/growth.n.04/SynsetName/vegetation that has grown/SynsetDefinition//Synset/emergence.n.01/SynsetName/the gradual beginning or coming forth/SynsetDefinition//Synset/growth.n.06/SynsetName/(pathology) an abnormal proliferation of tissue (as in a tumor)/SynsetDefinition//Synset/growth.n.07/SynsetName/something grown or growing/SynsetDefinition//Synset//Term/" +
-"gene/TermName/gene.n.01/TermSense/gene.n.01/SynsetName/(genetics) a segment of DNA that is involved in producing a polypeptide chain; it can include regions preceding and following the coding DNA as well as introns between the exons; it is considered a unit of heredity/SynsetDefinition//Synset//Term/" +
-"proliferation/TermName/proliferation.n.02/TermSense/proliferation.n.01/SynsetName/growth by the rapid multiplication of parts/SynsetDefinition//Synset/proliferation.n.02/SynsetName/a rapid increase in number (especially a rapid increase in the number of deadly weapons)/SynsetDefinition//Synset//Term/" +
-"analysis/TermName/analysis.n.04/TermSense/analysis.n.01/SynsetName/an investigation of the component parts of a whole and their relations in making up the whole/SynsetDefinition//Synset/analysis.n.02/SynsetName/the abstract separation of a whole into its constituent parts in order to study the parts and their relations/SynsetDefinition//Synset/analysis.n.03/SynsetName/a form of literary criticism in which the structure of a piece of writing is analyzed/SynsetDefinition//Synset/analysis.n.04/SynsetName/the use of closed-class words instead of inflections: e.g., `the father of the bride' instead of `the bride's father'/SynsetDefinition//Synset/analysis.n.05/SynsetName/a branch of mathematics involving calculus and the theory of limits; sequences and series and integration and differentiation/SynsetDefinition//Synset/psychoanalysis.n.01/SynsetName/a set of techniques for exploring underlying motives and a method of treating various mental disorders; based on the theories of Sigmund Freud/SynsetDefinition//Synset//Term/" +
-"therapy/TermName/therapy.n.01/TermSense/therapy.n.01/SynsetName/(medicine) the act of caring for someone (as by medication or remedial training etc.)/SynsetDefinition//Synset//Term/" +
-"breast cancer/TermName/breast_cancer.n.01/TermSense/breast_cancer.n.01/SynsetName/cancer of the breast; one of the most common malignancies in women in the US/SynsetDefinition//Synset//Term/" +
-"cancer patient/TermName/None/TermSense//Term/" +
-"cancer cell/TermName/cancer_cell.n.01/TermSense/cancer_cell.n.01/SynsetName/a cell that is part of a malignant tumor/SynsetDefinition//Synset//Term/" +
-"cell line/TermName/None/TermSense//Term/" +
-"breast cancer patient/TermName/None/TermSense//Term/" +
-"breast cancer cell/TermName/None/TermSense//Term/" +
-"breast carcinoma/TermName/None/TermSense//Term/" +
-"human breast/TermName/None/TermSense//Term/" +
-"breast tumor/TermName/None/TermSense//Term/" +
-"cell proliferation/TermName/None/TermSense//Term/" +
-"tumor cell/TermName/None/TermSense//Term/" +
-"cell growth/TermName/None/TermSense//Term/" +
-"growth factor/TermName/growth_factor.n.01/TermSense/growth_factor.n.01/SynsetName/a protein that is involved in cell differentiation and growth/SynsetDefinition//Synset//Term/"
-        };
+   }
+
+   public static void main5(String[] args) throws RemoteException, OWLOntologyCreationException, IOException {
+      String[] terms = new String[]{
+         "breast/TermName/breast.n.01/TermSense/breast.n.01/SynsetName/the front of the trunk from the neck to the abdomen/SynsetDefinition//Synset/breast.n.02/SynsetName/either of two soft fleshy milk-secreting glandular organs on the chest of a woman/SynsetDefinition//Synset/breast.n.03/SynsetName/meat carved from the breast of a fowl/SynsetDefinition//Synset/breast.n.04/SynsetName/the part of an animal's body that corresponds to a person's chest/SynsetDefinition//Synset//Term/"
+         + "cancer/TermName/cancer.n.01/TermSense/cancer.n.01/SynsetName/any malignant growth or tumor caused by abnormal and uncontrolled cell division; it may spread to other parts of the body through the lymphatic system or the blood stream/SynsetDefinition//Synset/cancer.n.02/SynsetName/(astrology) a person who is born while the sun is in Cancer/SynsetDefinition//Synset/cancer.n.03/SynsetName/a small zodiacal constellation in the northern hemisphere; between Leo and Gemini/SynsetDefinition//Synset/cancer.n.04/SynsetName/the fourth sign of the zodiac; the sun is in this sign from about June 21 to July 22/SynsetDefinition//Synset/cancer.n.05/SynsetName/type genus of the family Cancridae/SynsetDefinition//Synset//Term/"
+         + "diagnosis/TermName/diagnosis.n.01/TermSense/diagnosis.n.01/SynsetName/identifying the nature or cause of some phenomenon/SynsetDefinition//Synset//Term/"
+         + "patient/TermName/patient.n.01/TermSense/patient.n.01/SynsetName/a person who requires medical care/SynsetDefinition//Synset/affected_role.n.01/SynsetName/the semantic role of an entity that is not the agent but is directly involved in or affected by the happening denoted by the verb in the clause/SynsetDefinition//Synset//Term/"
+         + "study/TermName/study.n.09/TermSense/survey.n.01/SynsetName/a detailed critical inspection/SynsetDefinition//Synset/study.n.02/SynsetName/applying the mind to learning and understanding a subject (especially by reading)/SynsetDefinition//Synset/report.n.01/SynsetName/a written document describing the findings of some individual or group/SynsetDefinition//Synset/study.n.04/SynsetName/a state of deep mental absorption/SynsetDefinition//Synset/study.n.05/SynsetName/a room used for reading and writing and studying/SynsetDefinition//Synset/discipline.n.01/SynsetName/a branch of knowledge/SynsetDefinition//Synset/sketch.n.01/SynsetName/preliminary drawing for later elaboration/SynsetDefinition//Synset/cogitation.n.02/SynsetName/attentive consideration and meditation/SynsetDefinition//Synset/study.n.09/SynsetName/someone who memorizes quickly and easily (as the lines for a part in a play)/SynsetDefinition//Synset/study.n.10/SynsetName/a composition intended to develop one aspect of the performer's technique/SynsetDefinition//Synset//Term/"
+         + "cell/TermName/cell.n.02/TermSense/cell.n.01/SynsetName/any small compartment/SynsetDefinition//Synset/cell.n.02/SynsetName/(biology) the basic structural and functional unit of all organisms; they may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals/SynsetDefinition//Synset/cell.n.03/SynsetName/a device that delivers an electric current as the result of a chemical reaction/SynsetDefinition//Synset/cell.n.04/SynsetName/a small unit serving as part of or as the nucleus of a larger political movement/SynsetDefinition//Synset/cellular_telephone.n.01/SynsetName/a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver/SynsetDefinition//Synset/cell.n.06/SynsetName/small room in which a monk or nun lives/SynsetDefinition//Synset/cell.n.07/SynsetName/a room where a prisoner is kept/SynsetDefinition//Synset//Term/"
+         + "expression/TermName/expression.n.07/TermSense/expression.n.01/SynsetName/the feelings expressed on a person's face/SynsetDefinition//Synset/expression.n.02/SynsetName/expression without words/SynsetDefinition//Synset/expression.n.03/SynsetName/the communication (in speech or writing) of your beliefs or opinions/SynsetDefinition//Synset/saying.n.01/SynsetName/a word or phrase that particular people use in particular situations/SynsetDefinition//Synset/formulation.n.03/SynsetName/the style of expressing yourself/SynsetDefinition//Synset/formula.n.01/SynsetName/a group of symbols that make a mathematical statement/SynsetDefinition//Synset/expression.n.07/SynsetName/(genetics) the process of expressing a gene/SynsetDefinition//Synset/construction.n.02/SynsetName/a group of words that form a constituent of a sentence and are considered as a single unit/SynsetDefinition//Synset/expression.n.09/SynsetName/the act of forcing something out by squeezing or pressing/SynsetDefinition//Synset//Term/"
+         + "tumor/TermName/tumor.n.01/TermSense/tumor.n.01/SynsetName/an abnormal new mass of tissue that serves no purpose/SynsetDefinition//Synset//Term/"
+         + "role/TermName/character.n.04/TermSense/function.n.03/SynsetName/the actions and activities assigned to or required or expected of a person or group/SynsetDefinition//Synset/character.n.04/SynsetName/an actor's portrayal of someone in a play/SynsetDefinition//Synset/function.n.02/SynsetName/what something is used for/SynsetDefinition//Synset/role.n.04/SynsetName/normal or customary activity of a person in a particular social setting/SynsetDefinition//Synset//Term/"
+         + "protein/TermName/protein.n.01/TermSense/protein.n.01/SynsetName/any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes/SynsetDefinition//Synset//Term/"
+         + "survival/TermName/None/TermSense/survival.n.01/SynsetName/a state of surviving; remaining alive/SynsetDefinition//Synset/survival.n.02/SynsetName/a natural process resulting in the evolution of organisms best adapted to the environment/SynsetDefinition//Synset/survival.n.03/SynsetName/something that survives/SynsetDefinition//Synset//Term/"
+         + "carcinoma/TermName/carcinoma.n.01/TermSense/carcinoma.n.01/SynsetName/any malignant tumor derived from epithelial tissue; one of the four major types of cancer/SynsetDefinition//Synset//Term/"
+         + "risk/TermName/risk.n.03/TermSense/hazard.n.01/SynsetName/a source of danger; a possibility of incurring loss or misfortune/SynsetDefinition//Synset/risk.n.02/SynsetName/a venture undertaken without regard to possible loss or injury/SynsetDefinition//Synset/risk.n.03/SynsetName/the probability of becoming infected given that exposure to an infectious agent has occurred/SynsetDefinition//Synset/risk.n.04/SynsetName/the probability of being exposed to an infectious agent/SynsetDefinition//Synset//Term/"
+         + "treatment/TermName/treatment.n.02/TermSense/treatment.n.01/SynsetName/care provided to improve a situation (especially medical procedures or applications that are intended to relieve illness or injury)/SynsetDefinition//Synset/treatment.n.02/SynsetName/the management of someone or something/SynsetDefinition//Synset/treatment.n.03/SynsetName/a manner of dealing with something artistically/SynsetDefinition//Synset/discussion.n.01/SynsetName/an extended communication (often interactive) dealing with some particular topic/SynsetDefinition//Synset//Term/"
+         + "case/TermName/font.n.01/TermSense/case.n.01/SynsetName/an occurrence of something/SynsetDefinition//Synset/event.n.02/SynsetName/a special set of circumstances/SynsetDefinition//Synset/lawsuit.n.01/SynsetName/a comprehensive term for any proceeding in a court of law whereby an individual seeks a legal remedy/SynsetDefinition//Synset/case.n.04/SynsetName/the actual state of things/SynsetDefinition//Synset/case.n.05/SynsetName/a portable container for carrying several objects/SynsetDefinition//Synset/case.n.06/SynsetName/a person requiring professional services/SynsetDefinition//Synset/subject.n.06/SynsetName/a person who is subjected to experimental or other observational procedures; someone who is an object of investigation/SynsetDefinition//Synset/case.n.08/SynsetName/a problem requiring investigation/SynsetDefinition//Synset/case.n.09/SynsetName/a statement of facts and reasons used to support an argument/SynsetDefinition//Synset/case.n.10/SynsetName/the quantity contained in a case/SynsetDefinition//Synset/case.n.11/SynsetName/nouns or pronouns or adjectives (often marked by inflection) related in some way to other words in a sentence/SynsetDefinition//Synset/case.n.12/SynsetName/a specific state of mind that is temporary/SynsetDefinition//Synset/character.n.05/SynsetName/a person of a specified kind (usually with many eccentricities)/SynsetDefinition//Synset/font.n.01/SynsetName/a specific size and style of type within a type family/SynsetDefinition//Synset/sheath.n.02/SynsetName/an enveloping structure or covering enclosing an animal or plant organ or part/SynsetDefinition//Synset/shell.n.08/SynsetName/the housing or outer covering of something/SynsetDefinition//Synset/casing.n.03/SynsetName/the enclosing frame around a door or window opening/SynsetDefinition//Synset/case.n.18/SynsetName/(printing) the receptacle in which a compositor has his type, which is divided into compartments for the different letters, spaces, or numbers/SynsetDefinition//Synset/case.n.19/SynsetName/bed linen consisting of a cover for a pillow/SynsetDefinition//Synset/case.n.20/SynsetName/a glass container used to store and display items in a shop or museum or home/SynsetDefinition//Synset//Term/"
+         + "metastasis/TermName/metastasis.n.01/TermSense/metastasis.n.01/SynsetName/the spreading of a disease (especially cancer) to another part of the body/SynsetDefinition//Synset//Term/"
+         + "positive/TermName/positive.n.01/TermSense/positive.n.01/SynsetName/the primary form of an adjective or adverb; denotes a quality without qualification, comparison, or relation to increase or diminution/SynsetDefinition//Synset/positive.n.02/SynsetName/a film showing a photographic image whose tones correspond to those of the original subject/SynsetDefinition//Synset//Term/"
+         + "surgery/TermName/None/TermSense/surgery.n.01/SynsetName/the branch of medical science that treats disease or injury by operative procedures/SynsetDefinition//Synset/surgery.n.02/SynsetName/a room where a doctor or dentist can be consulted/SynsetDefinition//Synset/operating_room.n.01/SynsetName/a room in a hospital equipped for the performance of surgical operations/SynsetDefinition//Synset/operation.n.06/SynsetName/a medical procedure involving an incision with instruments; performed to repair damage or arrest disease in a living body/SynsetDefinition//Synset//Term/"
+         + "receptor/TermName/receptor.n.01/TermSense/receptor.n.01/SynsetName/a cellular structure that is postulated to exist in order to mediate between a chemical agent that acts on nervous tissue and the physiological response/SynsetDefinition//Synset/sense_organ.n.01/SynsetName/an organ having nerve endings (in the skin or viscera or eye or ear or nose or mouth) that respond to stimulation/SynsetDefinition//Synset//Term/"
+         + "growth/TermName/growth.n.06/TermSense/growth.n.01/SynsetName/(biology) the process of an individual organism growing organically; a purely biological unfolding of events involved in an organism changing gradually from a simple to a more complex level/SynsetDefinition//Synset/growth.n.02/SynsetName/a progression from simpler to more complex forms/SynsetDefinition//Synset/increase.n.03/SynsetName/a process of becoming larger or longer or more numerous or more important/SynsetDefinition//Synset/growth.n.04/SynsetName/vegetation that has grown/SynsetDefinition//Synset/emergence.n.01/SynsetName/the gradual beginning or coming forth/SynsetDefinition//Synset/growth.n.06/SynsetName/(pathology) an abnormal proliferation of tissue (as in a tumor)/SynsetDefinition//Synset/growth.n.07/SynsetName/something grown or growing/SynsetDefinition//Synset//Term/"
+         + "gene/TermName/gene.n.01/TermSense/gene.n.01/SynsetName/(genetics) a segment of DNA that is involved in producing a polypeptide chain; it can include regions preceding and following the coding DNA as well as introns between the exons; it is considered a unit of heredity/SynsetDefinition//Synset//Term/"
+         + "proliferation/TermName/proliferation.n.02/TermSense/proliferation.n.01/SynsetName/growth by the rapid multiplication of parts/SynsetDefinition//Synset/proliferation.n.02/SynsetName/a rapid increase in number (especially a rapid increase in the number of deadly weapons)/SynsetDefinition//Synset//Term/"
+         + "analysis/TermName/analysis.n.04/TermSense/analysis.n.01/SynsetName/an investigation of the component parts of a whole and their relations in making up the whole/SynsetDefinition//Synset/analysis.n.02/SynsetName/the abstract separation of a whole into its constituent parts in order to study the parts and their relations/SynsetDefinition//Synset/analysis.n.03/SynsetName/a form of literary criticism in which the structure of a piece of writing is analyzed/SynsetDefinition//Synset/analysis.n.04/SynsetName/the use of closed-class words instead of inflections: e.g., `the father of the bride' instead of `the bride's father'/SynsetDefinition//Synset/analysis.n.05/SynsetName/a branch of mathematics involving calculus and the theory of limits; sequences and series and integration and differentiation/SynsetDefinition//Synset/psychoanalysis.n.01/SynsetName/a set of techniques for exploring underlying motives and a method of treating various mental disorders; based on the theories of Sigmund Freud/SynsetDefinition//Synset//Term/"
+         + "therapy/TermName/therapy.n.01/TermSense/therapy.n.01/SynsetName/(medicine) the act of caring for someone (as by medication or remedial training etc.)/SynsetDefinition//Synset//Term/"
+         + "breast cancer/TermName/breast_cancer.n.01/TermSense/breast_cancer.n.01/SynsetName/cancer of the breast; one of the most common malignancies in women in the US/SynsetDefinition//Synset//Term/"
+         + "cancer patient/TermName/None/TermSense//Term/"
+         + "cancer cell/TermName/cancer_cell.n.01/TermSense/cancer_cell.n.01/SynsetName/a cell that is part of a malignant tumor/SynsetDefinition//Synset//Term/"
+         + "cell line/TermName/None/TermSense//Term/"
+         + "breast cancer patient/TermName/None/TermSense//Term/"
+         + "breast cancer cell/TermName/None/TermSense//Term/"
+         + "breast carcinoma/TermName/None/TermSense//Term/"
+         + "human breast/TermName/None/TermSense//Term/"
+         + "breast tumor/TermName/None/TermSense//Term/"
+         + "cell proliferation/TermName/None/TermSense//Term/"
+         + "tumor cell/TermName/None/TermSense//Term/"
+         + "cell growth/TermName/None/TermSense//Term/"
+         + "growth factor/TermName/growth_factor.n.01/TermSense/growth_factor.n.01/SynsetName/a protein that is involved in cell differentiation and growth/SynsetDefinition//Synset//Term/"
+      };
         List<Term> Terms = new ArrayList<Term>();
         for (String term : terms) {
             Terms.add(new Term(term));

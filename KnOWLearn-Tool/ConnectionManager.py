@@ -34,9 +34,9 @@ if __name__ == "__main__":
   if len(sys.argv) > 1:
     PORT = int(sys.argv[1])
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-  print (HOST, PORT)
   s.bind((HOST, PORT))
   s.listen(1)
+  print (HOST, PORT)
   conn, addr = s.accept()
   print 'Connected by', addr
   platform = sys.platform

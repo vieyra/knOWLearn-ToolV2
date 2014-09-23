@@ -1,7 +1,6 @@
 package TermExtraction;
 
 import InitialScheme.Sources.Term;
-import InitialScheme.Sources.WordNetSources.Synset;
 import Utils.PythonConnection.ConnectionManager;
 import TermDisambiguation.DisambiguateTermsGUI;
 import java.io.IOException;
