@@ -37,6 +37,7 @@ public class ConnectionManager {
           port += 5;
        }
        process = Runtime.getRuntime().exec("python ConnectionManager.py " + port);
+//       process = Runtime.getRuntime().exec("c:/Python27/python.exe ConnectionManager.py " + port);
        Thread.sleep(5000);
        socket = new Socket("localhost", port);
        System.out.println("--- Initializing connection in port " + port + "---");
