@@ -1,0 +1,2543 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knowlearn.infotec.com.mx/test.owl#"
+     xml:base="http://knowlearn.infotec.com.mx/test.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://knowlearn.infotec.com.mx/test.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#Gothic -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#Gothic">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#Kupffer&apos;s_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#Kupffer&apos;s_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#Leydig_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#Leydig_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#Sertoli_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#Sertoli_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#X-linked_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#X-linked_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#Y-linked_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#Y-linked_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#acanthoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#acanthoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#accountancy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#accountancy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#act -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#act">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#acting -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#acting">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#activity"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#performing_arts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#activity -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#activity">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#act"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#actomyosin -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#actomyosin">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#acyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#acyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#adenocarcinoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#adenocarcinoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#adjective -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#adjective">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#modifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#adverb -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#adverb">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#modifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#akaryocyte -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#akaryocyte">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#alcohol_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#alcohol_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#aldehyde_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#aldehyde_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#aleurone -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#aleurone">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#alexic -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#alexic">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#alkyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#alkyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#allele -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#allele">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#allyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#allyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#alpha_receptor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#alpha_receptor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#receptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#amino -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#amino">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#amyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#amyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#amyloid -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#amyloid">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#analysand -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#analysand">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#analysis -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#analysis">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#expressive_style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#angioma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#angioma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#antibody -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#antibody">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#apoenzyme -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#apoenzyme">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#appointment -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#appointment">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#archespore -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#archespore">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#aromatherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#aromatherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#arrangement -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#arrangement">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#arthritic -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#arthritic">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#arthrospore -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#arthrospore">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#attribute -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#attribute"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#azido_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#azido_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#azo_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#azo_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#benign_tumor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#benign_tumor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#benzoyl_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#benzoyl_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#benzyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#benzyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#beta_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#beta_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#beta_receptor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#beta_receptor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#receptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#bicameral_script -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#bicameral_script">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#bioremediation -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#bioremediation">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#bit_part -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#bit_part">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#blastema -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#blastema">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#blastoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#blastoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#blastomere -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#blastomere">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#blood_typing -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#blood_typing">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#diagnosis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#body_part -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#body_part">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#boldface -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#boldface">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#brain_tumor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#brain_tumor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#breast -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#breast">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#external_body_part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#breast_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#breast_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#butyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#butyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cacodyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cacodyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#malignant_tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cancer_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cancer_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#neoplastic_cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#capsid -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#capsid">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#carbonyl_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#carbonyl_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#carboxyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#carboxyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#carcinoid -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#carcinoid">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#carcinoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#carcinoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cancer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#carcinoma_in_situ -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#carcinoma_in_situ">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#care -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#care">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#career -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#career">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#case -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#case">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#catering -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#catering">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#causal_agent -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#causal_agent"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#celioma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#celioma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#living_thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#character -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#character">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#portrayal"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#written_symbol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#chemical -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#chemical">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#material"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#chemotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#chemotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#chromophore -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#chromophore">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cognition -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cognition">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#psychological_feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#colon_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#colon_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#communication -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#communication"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#compound -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#compound">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#chemical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#condition -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#condition">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#state"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#confectionery -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#confectionery">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#conjugated_protein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#conjugated_protein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#content -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#content">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#content_word -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#content_word">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#word"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#correction -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#correction">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cost -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cost">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#outgo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cyano_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cyano_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#cytokine -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#cytokine">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#daughter_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#daughter_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#dealing -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#dealing">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#designation -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#designation">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#determination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#determination -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#determination">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#discovery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#diagnosis -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#diagnosis">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#designation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#discipline -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#discipline">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#knowledge_domain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#discovery -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#discovery">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#act"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#disease -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#disease">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#illness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#dominant_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#dominant_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#electrotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#electrotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#embryonal_carcinoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#embryonal_carcinoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#embryonic_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#embryonic_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#employment -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#employment">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#endometrial_carcinoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#endometrial_carcinoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#enzyme -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#enzyme">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#event -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#event">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#psychological_feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#excrescence -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#excrescence">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#growth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#exostosis -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#exostosis">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#growth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#expression -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#expression">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#organic_process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#expressive_style -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#expressive_style">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#external_body_part -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#external_body_part">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#body_part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#farming -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#farming">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#ferritin -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#ferritin">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#fiber -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#fiber">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#fibrin -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#fibrin">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#filaggrin -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#filaggrin">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#flagellated_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#flagellated_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#font -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#font">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#font_cartridge -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#font_cartridge">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#found -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#found">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#wage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#game -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#game">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#gametocyte -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#gametocyte">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#sequence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#genetic_marker -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#genetic_marker">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#gluten -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#gluten">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#glyceryl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#glyceryl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#granuloma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#granuloma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#group_action -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#group_action">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#growth -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#growth">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#illness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#growth_factor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#growth_factor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hamartoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hamartoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#growth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#haptoglobin -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#haptoglobin">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#heavy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#heavy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#heliotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#heliotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hepatoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hepatoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hero -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hero">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#heroine -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#heroine">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#homeotic_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#homeotic_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hormone_replacement_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hormone_replacement_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#humanistic_discipline -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#humanistic_discipline">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#discipline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hydrazo_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hydrazo_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hydroxyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hydroxyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hypertensive -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hypertensive">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hypochondriac -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hypochondriac">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#hypotensive -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#hypotensive">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#ill_health -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#ill_health">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#pathological_state"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#illness -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#illness">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#ill_health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#immunotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#immunotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#increase -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#increase">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#index_case -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#index_case">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#inflation_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#inflation_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#infrared_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#infrared_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#ingenue -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#ingenue">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#inpatient -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#inpatient">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#iodoprotein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#iodoprotein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#iontophoresis -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#iontophoresis">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#italic -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#italic">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#ketone_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#ketone_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#knowledge_domain -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#knowledge_domain">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#content"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#language_unit -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#language_unit">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#learner -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#learner">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#lethal_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#lethal_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#leukemia -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#leukemia">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cancer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#linkage_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#linkage_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#lipoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#lipoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#liver_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#liver_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#living_thing -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#living_thing"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#lung_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#lung_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#lymphoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#lymphoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cancer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#macromolecule -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#macromolecule">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#molecule"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#organic_compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#malignancy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#malignancy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#malignant_tumor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#malignant_tumor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#malignancy"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#management -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#management">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#social_control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#material -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#material">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#matter -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#matter"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#measure -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#measure"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#medical_care -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#medical_care">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#medical_diagnosis -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#medical_diagnosis">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#diagnosis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#medication -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#medication">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#megavitamin_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#megavitamin_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#memorizer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#memorizer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#learner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#meningioma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#meningioma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#mesothelioma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#mesothelioma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#metastasis -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#metastasis">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#pathologic_process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#methylene_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#methylene_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#metier -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#metier">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#modifier -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#modifier">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#content_word"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#molecule -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#molecule">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#mother_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#mother_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#mutant_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#mutant_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#neoplastic_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#neoplastic_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#somatic_cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#nerve_growth_factor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#nerve_growth_factor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#growth_factor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#neurofibroma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#neurofibroma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#neuroma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#neuroma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#nitrite -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#nitrite">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#nitro_group -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#nitro_group">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#nonallele -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#nonallele">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#nucleoprotein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#nucleoprotein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#oat_cell_carcinoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#oat_cell_carcinoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#occupation -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#occupation">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#occupational_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#occupational_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#oncogene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#oncogene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#operator_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#operator_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#opsin -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#opsin">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#oral_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#oral_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#ordering -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#ordering">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#arrangement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#organic_compound -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#organic_compound">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#organic_process -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#organic_process">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#organism -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#organism">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#living_thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#outgo -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#outgo">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#transferred_property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#outpatient -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#outpatient">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#pancreatic_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#pancreatic_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#part -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#part">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#parthenote -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#parthenote">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#pathologic_process -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#pathologic_process">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#organic_process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#pathological_state -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#pathological_state">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#physical_condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#patient -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#patient">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#case"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#sick_person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#payment -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#payment">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#peduncle -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#peduncle">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#growth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#performing_arts -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#performing_arts">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#humanistic_discipline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#person -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#person">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#causal_agent"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#organism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#pheochromocytoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#pheochromocytoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#phosphoprotein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#phosphoprotein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#photography -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#photography">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#physical_condition -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#physical_condition">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#physical_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#physical_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#phytotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#phytotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#pinealoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#pinealoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#plant_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#plant_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#plasma_protein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#plasma_protein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#plasmacytoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#plasmacytoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#polar_body -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#polar_body">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#polygene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#polygene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#polyp -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#polyp">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#growth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#portrayal -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#portrayal">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#acting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#position -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#position">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#positive -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#positive">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#adjective"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#adverb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#possession -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#possession">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#probability -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#probability">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#process -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#process"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#profession -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#profession">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#proliferation -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#proliferation">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#increase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#proportional_font -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#proportional_font">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#propyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#propyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#prostate_specific_antigen -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#prostate_specific_antigen">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#protein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#protein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#macromolecule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#proteome -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#proteome">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#proto-oncogene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#proto-oncogene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#psammoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#psammoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#psychological_feature -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#psychological_feature"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#psychotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#psychotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#radiotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#radiotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#receptor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#receptor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#structure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#recessive_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#recessive_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#recombinant -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#recombinant">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#recombinant_protein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#recombinant_protein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#refrigeration -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#refrigeration">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#regular_payment -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#regular_payment">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#regulatory_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#regulatory_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#relation -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#relation"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#repressor_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#repressor_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#reproductive_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#reproductive_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#risk -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#risk">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#probability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#sans_serif -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#sans_serif">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#sarcoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#sarcoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cancer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#screen_font -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#screen_font">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#seminoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#seminoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#sequence -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#sequence">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#series"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#series -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#series">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#ordering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#shock_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#shock_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#sick_person -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#sick_person">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#unfortunate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#signal -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#signal">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#simple_protein -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#simple_protein">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#skin_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#skin_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#social_control -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#social_control">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group_action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#somatic_cell -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#somatic_cell">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#speech_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#speech_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#sport -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#sport">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#state -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#state">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#structural_gene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#structural_gene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#structure -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#structure">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#body_part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#study -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#study">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#memorizer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#substance -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#substance">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#matter"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#suppressor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#suppressor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#symbol -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#symbol">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#signal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#teratoma -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#teratoma">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#tumor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#medical_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#thermotherapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#thermotherapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#thrombolytic_therapy -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#thrombolytic_therapy">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#therapy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#title_role -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#title_role">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#trade -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#trade">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#transferred_property -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#transferred_property">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#possession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#transgene -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#transgene">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#treadmill -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#treadmill">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#occupation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#treatment -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#treatment">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#care"/>
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#trophoblastic_cancer -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#trophoblastic_cancer">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#carcinoma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#tumor -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#tumor">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#growth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#type -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#type">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#typewriter_font -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#typewriter_font">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#unfortunate -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#unfortunate">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#unicameral_script -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#unicameral_script">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#font"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#unit -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#unit"/>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#uranyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#uranyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#urinalysis -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#urinalysis">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#diagnosis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#vaccinee -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#vaccinee">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#villain -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#villain">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#vinyl -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#vinyl">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#wage -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#wage">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#regular_payment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#word -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#word">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#language_unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#work -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#work">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#written_symbol -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#written_symbol">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#symbol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowlearn.infotec.com.mx/test.owl#zygote -->
+
+    <owl:Class rdf:about="http://knowlearn.infotec.com.mx/test.owl#zygote">
+        <rdfs:subClassOf rdf:resource="http://knowlearn.infotec.com.mx/test.owl#cell"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.${svn.Revision}) http://owlapi.sourceforge.net -->
+

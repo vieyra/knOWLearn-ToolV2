@@ -3,7 +3,7 @@ from KnOWLearn.TermExtractor.CandidateTerms import CandidateTerms as extractTerm
 from KnOWLearn.WSDisambiguator.Disambiguator import Disambiguator as disambiguateTerms
 
 if __name__ == "__main__":
-  _filename = '../data/breast_cancer.txt'
+  _filename = './data/breast_cancer.txt'
 
 # Para extraer términos:
   print '*********Buscando términos en ',_filename,' ***********'
